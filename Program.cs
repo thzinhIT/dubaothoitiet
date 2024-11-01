@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace dubaothoitiet
+namespace howto_weather_forecast2
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace dubaothoitiet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormLogin());
         }
     }
 }
