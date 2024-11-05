@@ -2,6 +2,8 @@
 {
     partial class Form1
     {
+       
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -46,6 +48,10 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboQuery = new System.Windows.Forms.ComboBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.txtReceiverID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtWeatherInfo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -63,16 +69,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLocation.Location = new System.Drawing.Point(91, 9);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(281, 20);
+            this.txtLocation.Size = new System.Drawing.Size(285, 20);
             this.txtLocation.TabIndex = 15;
             this.txtLocation.Text = "Vũng Tàu";
+            this.txtLocation.TextChanged += new System.EventHandler(this.txtLocation_TextChanged);
             // 
             // btnForecast
             // 
             this.btnForecast.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnForecast.Location = new System.Drawing.Point(137, 45);
+            this.btnForecast.Location = new System.Drawing.Point(137, 44);
             this.btnForecast.Name = "btnForecast";
-            this.btnForecast.Size = new System.Drawing.Size(147, 23);
+            this.btnForecast.Size = new System.Drawing.Size(103, 23);
             this.btnForecast.TabIndex = 16;
             this.btnForecast.Text = "Dự báo thời tiết";
             this.btnForecast.UseVisualStyleBackColor = true;
@@ -88,27 +95,29 @@
             this.columnHeader2,
             this.columnHeader3});
             this.lvwForecast.GridLines = true;
+            this.lvwForecast.HideSelection = false;
             this.lvwForecast.Location = new System.Drawing.Point(12, 177);
             this.lvwForecast.Name = "lvwForecast";
-            this.lvwForecast.Size = new System.Drawing.Size(360, 197);
+            this.lvwForecast.Size = new System.Drawing.Size(364, 197);
             this.lvwForecast.TabIndex = 19;
             this.lvwForecast.UseCompatibleStateImageBehavior = false;
             this.lvwForecast.View = System.Windows.Forms.View.Details;
+            this.lvwForecast.SelectedIndexChanged += new System.EventHandler(this.lvwForecast_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Ngày tháng";
-            this.columnHeader1.Width = 100;
+            this.columnHeader1.Width = 118;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Thời gian";
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Width = 130;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Nhiệt độ";
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Width = 111;
             // 
             // label3
             // 
@@ -204,12 +213,51 @@
             this.cboQuery.Size = new System.Drawing.Size(73, 21);
             this.cboQuery.TabIndex = 30;
             // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(566, 119);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(100, 23);
+            this.btnSend.TabIndex = 31;
+            this.btnSend.Text = "gửi client 2";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // txtReceiverID
+            // 
+            this.txtReceiverID.Location = new System.Drawing.Point(566, 8);
+            this.txtReceiverID.Name = "txtReceiverID";
+            this.txtReceiverID.Size = new System.Drawing.Size(123, 20);
+            this.txtReceiverID.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(481, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "nhập địa chỉ IP\r\n";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtWeatherInfo
+            // 
+            this.txtWeatherInfo.Location = new System.Drawing.Point(566, 67);
+            this.txtWeatherInfo.Name = "txtWeatherInfo";
+            this.txtWeatherInfo.Size = new System.Drawing.Size(123, 20);
+            this.txtWeatherInfo.TabIndex = 34;
+            this.txtWeatherInfo.TextChanged += new System.EventHandler(this.txtWeatherInfo_TextChanged);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnForecast;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 386);
+            this.ClientSize = new System.Drawing.Size(799, 386);
+            this.Controls.Add(this.txtWeatherInfo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtReceiverID);
+            this.Controls.Add(this.btnSend);
             this.Controls.Add(this.cboQuery);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label7);
@@ -234,7 +282,6 @@
         }
 
         #endregion
-
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Button btnForecast;
@@ -253,6 +300,10 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboQuery;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txtReceiverID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtWeatherInfo;
     }
 }
 
