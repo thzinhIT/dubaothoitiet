@@ -262,7 +262,7 @@ namespace dubaothoitiet
 
         private void receive_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide(); 
             Form2 form2 = new Form2();
             form2.Show();
         }
