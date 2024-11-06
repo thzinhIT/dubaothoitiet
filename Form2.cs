@@ -104,8 +104,8 @@ namespace howto_weather_forecast2
 
         private void sendData_Click(object sender, EventArgs e)
         {
-                this.Close();
-                Form form1 = new Form();
+                this.Hide(); 
+                Form1 form1 = new Form1();
                 form1.Show();
             
         }
