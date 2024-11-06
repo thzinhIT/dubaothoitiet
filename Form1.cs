@@ -13,6 +13,7 @@ using System.IO;
 using System.Globalization;
 using System.Net.Sockets;
 using System.Runtime.InteropServices.ComTypes;
+using howto_weather_forecast2;
 
 namespace dubaothoitiet
 {
@@ -257,6 +258,13 @@ namespace dubaothoitiet
         private void txtWeatherInfo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void receive_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }
