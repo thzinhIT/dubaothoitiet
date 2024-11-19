@@ -101,5 +101,13 @@ namespace howto_weather_forecast2
             listener?.Stop();
             listeningTask?.Wait();
         }
+
+        private void sendData_Click(object sender, EventArgs e)
+        {
+                this.Hide(); 
+                Form1 form1 = new Form1();
+                form1.Show();
+            
+        }
     }
 }

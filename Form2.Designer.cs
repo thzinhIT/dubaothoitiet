@@ -27,6 +27,7 @@
             this.lblWeatherInfo = new System.Windows.Forms.Label();
             this.txtWeatherInfo = new System.Windows.Forms.TextBox();
             this.txtLog = new System.Windows.Forms.TextBox();
+            this.sendData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEnterID
@@ -34,7 +35,7 @@
             this.lblEnterID.AutoSize = true;
             this.lblEnterID.Location = new System.Drawing.Point(20, 20);
             this.lblEnterID.Name = "lblEnterID";
-            this.lblEnterID.Size = new System.Drawing.Size(90, 13);
+            this.lblEnterID.Size = new System.Drawing.Size(107, 16);
             this.lblEnterID.TabIndex = 0;
             this.lblEnterID.Text = "Nhập ID hoặc IP:";
             // 
@@ -42,7 +43,7 @@
             // 
             this.txtReceiverID.Location = new System.Drawing.Point(130, 20);
             this.txtReceiverID.Name = "txtReceiverID";
-            this.txtReceiverID.Size = new System.Drawing.Size(200, 20);
+            this.txtReceiverID.Size = new System.Drawing.Size(200, 22);
             this.txtReceiverID.TabIndex = 1;
             // 
             // btnSend
@@ -59,7 +60,7 @@
             this.lblWeatherInfo.AutoSize = true;
             this.lblWeatherInfo.Location = new System.Drawing.Point(20, 60);
             this.lblWeatherInfo.Name = "lblWeatherInfo";
-            this.lblWeatherInfo.Size = new System.Drawing.Size(92, 13);
+            this.lblWeatherInfo.Size = new System.Drawing.Size(109, 16);
             this.lblWeatherInfo.TabIndex = 3;
             this.lblWeatherInfo.Text = "Thông tin thời tiết:";
             // 
@@ -76,12 +77,23 @@
             // 
             this.txtLog.Location = new System.Drawing.Point(167, 57);
             this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(100, 20);
+            this.txtLog.Size = new System.Drawing.Size(100, 22);
             this.txtLog.TabIndex = 5;
+            // 
+            // sendData
+            // 
+            this.sendData.Location = new System.Drawing.Point(297, 61);
+            this.sendData.Name = "sendData";
+            this.sendData.Size = new System.Drawing.Size(141, 23);
+            this.sendData.TabIndex = 6;
+            this.sendData.Text = "Xem thời tiết";
+            this.sendData.UseVisualStyleBackColor = true;
+            this.sendData.Click += new System.EventHandler(this.sendData_Click);
             // 
             // Form2
             // 
             this.ClientSize = new System.Drawing.Size(450, 260);
+            this.Controls.Add(this.sendData);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.lblEnterID);
             this.Controls.Add(this.txtReceiverID);
@@ -177,6 +189,7 @@
         private System.Windows.Forms.TextBox txtWeatherInfo;
         private System.Windows.Forms.Label lblWeatherInfo;
         private System.Windows.Forms.TextBox txtLog;
+        private System.Windows.Forms.Button sendData;
 
         // Khai báo txtWeatherInfo
 
